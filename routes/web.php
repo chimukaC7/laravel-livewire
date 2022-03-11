@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Livewire\FileUpload;
 use App\Http\Livewire\NotificationDemo;
+use App\Http\Livewire\Select2;
 use App\Http\Livewire\Statecitydropdown;
+use App\Http\Livewire\UserPagination;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +29,21 @@ Route::get('user-datatables', function () {
 Route::get('notification', NotificationDemo::class);
 
 Route::get('statecitydropdown', Statecitydropdown::class);
+
+Route::get('select2', Select2::class);
+
+//Route::get('image-upload', function () {
+//        return view('default');
+//});
+
+Route::get('file-upload', FileUpload::class );
+
+//Route::get('user-pagination', function () {
+//    return view('default');
+//});
+
+Route::get('user-pagination', UserPagination::class);
+
+Route::get('/form', function () {
+    return view('form');
+});
