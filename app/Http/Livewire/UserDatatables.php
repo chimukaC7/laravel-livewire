@@ -13,6 +13,11 @@ class UserDatatables extends LivewireDatatable
 {
     public $model = User::class;
 
+    public function builder()
+    {
+        return User::query();
+        //return User::query()->leftJoin('planets', 'planets.id', 'users.planet_id');
+    }
 
 
 
@@ -32,7 +37,10 @@ class UserDatatables extends LivewireDatatable
             Column::name('name')
                 ->label('Name'),
 
-            Column::name('email'),
+            Column::name('email')
+                ->searchable()
+                ->hideable()
+                ->filterable($this->email),
 
             DateColumn::name('created_at')
                 ->label('Creation Date')

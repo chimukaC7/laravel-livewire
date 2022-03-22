@@ -18,6 +18,7 @@
         <div class="card-body">
             <livewire:user-datatables
                 searchable="name, email"
+                per-page="15"
                 exportable
             />
         </div>

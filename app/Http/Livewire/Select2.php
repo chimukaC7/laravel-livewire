@@ -20,6 +20,6 @@ class Select2 extends Component
      */
     public function render()
     {
-        return view('livewire.select2')->extends('layouts.app');
+        return view('livewire.select2')->extends('layouts.app2');
     }
 }

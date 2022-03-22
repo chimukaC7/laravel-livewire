@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Contacts;
 use App\Http\Livewire\FileUpload;
 use App\Http\Livewire\NotificationDemo;
 use App\Http\Livewire\Select2;
@@ -47,3 +48,9 @@ Route::get('user-pagination', UserPagination::class);
 Route::get('/form', function () {
     return view('form');
 });
+
+//Route::get('contacts', function () {
+//    return view('default');
+//});
+
+Route::get('contacts', Contacts::class);

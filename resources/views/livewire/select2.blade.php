@@ -18,8 +18,7 @@
 
             $('#select2').on('change', function (e) {
                 var data = $('#select2').select2("val");
-                @this.
-                set('selCity', data);
+                @this.set('selCity', data);
             });
         });
     </script>
